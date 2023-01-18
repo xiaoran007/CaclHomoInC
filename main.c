@@ -78,7 +78,11 @@ void cacl(int check_num){
         int a, b;
         a = check_num / 2;
         b = check_num - a;
-        cacl(a);
-        cacl(b);
+        if (a != 0){
+            cacl(a);
+        }
+        if (b != 0){
+            cacl(b);
+        }
     }
 }
