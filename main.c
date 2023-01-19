@@ -76,13 +76,13 @@ void cacl(int check_num){
     }
     else {
         int a, b;
-        a = check_num / 2;
-        b = check_num - a;
-        if (a != 0){
-            cacl(a);
+        a = check_num;
+        b = 0;
+        while (SearchIfExist(a) != 1){
+            a--;
+            b++;
         }
-        if (b != 0){
-            cacl(b);
-        }
+        cacl(a);
+        cacl(b);
     }
 }
